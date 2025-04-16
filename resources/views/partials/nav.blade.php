@@ -10,9 +10,13 @@
         <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="/popular" class="nav-link">Popular</a></li>
         <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="/dashboard" class="nav-link">Dashboard</a></li>
       </ul>
 
-      <a class="btn btn-warning btn-sm" href="/login-form">Login</a>
+      @guest
+        <a class="btn btn-warning btn-sm" href="/login-form">Login</a>
+      @endguest
+      
     </div>
   </div>
 </nav>
