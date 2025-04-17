@@ -14,7 +14,7 @@
       </ul>
 
       @guest
-        <a class="btn btn-warning btn-sm" href="/login-form">Login</a>
+        <a class="btn btn-warning btn-sm" href="/login">Login</a>
       @endguest
       
     </div>

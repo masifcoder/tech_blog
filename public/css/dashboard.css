@@ -1,0 +1,36 @@
+body {
+    background-color: #f6f9fc;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .sidebar {
+    min-height: 100vh;
+    background-color: #fff;
+    border-right: 1px solid #dee2e6;
+  }
+  .sidebar .nav-link {
+    color: #333;
+    font-weight: 500;
+    padding: 12px 20px;
+  }
+  .sidebar .nav-link:hover,
+  .sidebar .nav-link.active {
+    background-color: #eef2f6;
+    color: #007bff;
+    border-left: 4px solid #007bff;
+  }
+  .dashboard-box {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+  .dashboard-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  .dashboard-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff;
+  }
