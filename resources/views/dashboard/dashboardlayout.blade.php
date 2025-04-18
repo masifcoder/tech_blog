@@ -18,7 +18,7 @@
         <nav class="nav flex-column">
           <a class="nav-link active" href="{{ route("dashboard.index") }}">Dashboard</a>
           <a class="nav-link" href="{{ route("posts.index") }}">Blog Posts</a>
-          <a class="nav-link" href="#">Create Post</a>
+          <a class="nav-link" href="{{ route("post.create") }}">Create Post</a>
           <a class="nav-link" href="#">Comments</a>
           <a class="nav-link" href="{{ route("dashbaord.settings") }}">Settings</a>
           <form method="POST" action="{{ route("logout") }}">
