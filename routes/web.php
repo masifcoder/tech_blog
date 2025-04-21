@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get("/", [BlogController::class, 'index'])->name('blog.index');
-Route::get("/post", [BlogController::class, 'single'])->name('blog.single');
+Route::get("/post/{id}", [BlogController::class, 'single'])->name('blog.single');
 
 
 Route::get("/login", [AuthController::class, 'loginForm'])->name("loginForm");

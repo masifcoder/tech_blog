@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   @stack('styles')
   <link rel="stylesheet" href="{{ asset("css/dashboard.css") }}">
 </head>
 <body>
@@ -14,7 +15,7 @@
 
       <!-- Sidebar -->
       <div class="col-md-3 col-lg-2 sidebar d-flex flex-column p-4">
-        <a class="navbar-brand fw-bold" href="#">Elegance</a>
+        <a class="navbar-brand fw-bold mb-3" href="/">Elegance</a>
         <nav class="nav flex-column">
           <a class="nav-link active" href="{{ route("dashboard.index") }}">Dashboard</a>
           <a class="nav-link" href="{{ route("posts.index") }}">Blog Posts</a>
@@ -41,5 +42,6 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  @stack('scripts');
 </body>
 </html>
