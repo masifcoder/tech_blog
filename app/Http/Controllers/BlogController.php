@@ -21,6 +21,8 @@ class BlogController extends Controller
 
         $post = Post::findOrFail($id);
 
+        //dd($post->user->name);
+
         return view("blog.single",  ['post' => $post]);
     }
 }

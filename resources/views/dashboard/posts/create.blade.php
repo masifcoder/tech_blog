@@ -23,6 +23,15 @@
         @enderror
     </div>
 
+     {{-- Excerpt --}}
+     <div class="mb-3">
+        <label for="excerpt" class="form-label">Excerpt:</label>
+        <input type="text" name="excerpt" class="form-control @error('excerpt') is-invalid @enderror" value="{{ old('excerpt') }}">
+        @error('excerpt')
+            <div class="invalid-feedback">{{ $message }}</div>
+        @enderror
+    </div>
+
     {{-- Content --}}
     <div class="mb-3">
         <label for="content" class="form-label">Content:</label>

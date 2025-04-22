@@ -15,8 +15,8 @@
               <a href="{{ route("blog.single", $post->id) }}">
                 <h5>{{ $post->title }}</h5>
               </a>
-              <p class="text-muted">by Oscar Lin</p>
-              <p class="mb-0">Learn how design thinking can help solve complex challenges creatively and effectively.</p>
+              <p class="text-muted">by {{$post->user->name}} - {{$post->created_at->diffForHumans()}}</p>
+              <p class="mb-0">{{ $post->excerpt }}</p>
             </div>
           </div>
         </div>

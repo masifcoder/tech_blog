@@ -8,5 +8,11 @@ class Post extends Model
 {
     
 
-    protected $fillable = ['title', 'content', 'photo_path', 'user_id', 'category_id'];
+    protected $fillable = ['title', 'content', 'photo_path', 'excerpt', 'user_id', 'category_id'];
+
+
+    // One to One relation
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
 }

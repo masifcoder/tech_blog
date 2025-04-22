@@ -12,8 +12,8 @@
   <div class="author-info mb-4">
     <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Author">
     <div>
-      <strong>Jane Doe</strong><br>
-      <small class="text-muted">April 15, 2025 · 6 min read</small>
+      <strong>{{$post->user->name}}</strong><br>
+      <small class="text-muted">{{$post->created_at->format("F d, Y")}}</small>
     </div>
   </div>
 

@@ -13,10 +13,16 @@ class PostController extends Controller
 
     public function index() {
 
-        $user_id = Auth::user()->id;
-       // dd($user_id);
+
+        $posts = Auth::user()->posts;
+
+     //   dd($posts);
+
+
+    //     $user_id = Auth::user()->id;
+    //    // dd($user_id);
         
-        $posts = Post::where("user_id", $user_id)->get();
+    //     $posts = Post::where("user_id", $user_id)->get();
 
         //dd($posts);
 
@@ -33,6 +39,7 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',
+            'excerpt' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
@@ -43,6 +50,7 @@ class PostController extends Controller
           // store data into db
         Post::create([
             'title' => $request->input('title'),
+            'excerpt' => $request->input('excerpt'),
             'content' => $request->input('content'),
             'photo_path' => $path,
             "user_id" => Auth::user()->id,
