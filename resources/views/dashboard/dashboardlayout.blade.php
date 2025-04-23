@@ -20,6 +20,11 @@
           <a class="nav-link active" href="{{ route("dashboard.index") }}">Dashboard</a>
           <a class="nav-link" href="{{ route("posts.index") }}">Blog Posts</a>
           <a class="nav-link" href="{{ route("post.create") }}">Create Post</a>
+          
+          @if (auth()->user()->role == 'admin')
+            <a class="nav-link" href="{{ route("cats.index") }}">Categories</a>
+          @endif
+
           <a class="nav-link" href="#">Comments</a>
           <a class="nav-link" href="{{ route("dashbaord.settings") }}">Settings</a>
           <form method="POST" action="{{ route("logout") }}">

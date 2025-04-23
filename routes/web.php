@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\dashboard\DashboardController;
 use App\Http\Controllers\dashboard\PostController;
 use Illuminate\Support\Facades\Route;
@@ -34,5 +35,15 @@ Route::middleware(['auth'])->prefix('/dashboard')->group( function() {
     Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
     Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
     Route::post('/post/store', [PostController::class, 'store'])->name('post.store');
+
+});
+
+// category routes only for admin
+Route::middleware(['auth', 'is_admin'])->prefix("/dashboard")->group(function() {
+
+    // Route::resource('/cat', CategoryController::class);
+    Route::get("/cats", [CategoryController::class, 'index'])->name('cats.index');
+    Route::get("/cats/create", [CategoryController::class, 'create'])->name('cats.create');
+    Route::post("/cats/store", [CategoryController::class, 'store'])->name('cats.store');
 
 });
