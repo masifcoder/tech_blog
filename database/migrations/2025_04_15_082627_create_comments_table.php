@@ -16,7 +16,7 @@ return new class extends Migration
             $table->text("comment");
             $table->foreignId("post_id")->constrained()->onDelete("cascade");
             $table->foreignId('user_id')->constrained()->onDelete("cascade");
-            $table->boolean('is_approved')->default(false);
+            $table->boolean('is_approved')->default(true);
             $table->timestamps();
         });
     }

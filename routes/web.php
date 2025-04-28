@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\dashboard\DashboardController;
 use App\Http\Controllers\dashboard\PostController;
 use Illuminate\Support\Facades\Route;
@@ -35,6 +36,9 @@ Route::middleware(['auth'])->prefix('/dashboard')->group( function() {
     Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
     Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
     Route::post('/post/store', [PostController::class, 'store'])->name('post.store');
+
+
+    Route::post("/comment/store", [CommentController::class, 'store'])->name("comment.store");
 
 });
 
